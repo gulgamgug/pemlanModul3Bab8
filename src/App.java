@@ -1,42 +1,54 @@
 import java.util.Scanner;
 
+import tugas_praktikum.Employee;
+import tugas_praktikum.Invoice;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner input = new Scanner(System.in);
+        Invoice barang1 = new Invoice("Beras 5kg", 2, 60000);
+        Invoice barang2 = new Invoice("Minyak Goreng 2L", 1, 35000);
+        Invoice barang3 = new Invoice("Gula Pasir 1kg", 3, 15000);
 
-        Hewan kucing = new Hewan();
-        kucing.makan();
-        kucing.berjalan();
-        kucing.bersuara();
+        Invoice[] belanjaanBudi = { barang1, barang2, barang3 };
 
-        System.out.print("Masukkan nama Anda: ");
-        String namaManusia = input.nextLine();
-        System.out.print("Masukkan umur Anda: ");
-        int umurManusia = input.nextInt();
-        input.nextLine(); 
+        Employee budi = new Employee("budi", 12345, 400000, belanjaanBudi);
 
-        Manusia user = new Manusia(namaManusia, umurManusia);
+        System.out.println(budi);
+        // Scanner input = new Scanner(System.in);
 
-        user.tampilkanNama();
-        user.tampilkanUmur();
-        user.makan();
-        user.berjalan();
-        user.bersuara();
+        // Hewan kucing = new Hewan();
+        // kucing.makan();
+        // kucing.berjalan();
+        // kucing.bersuara();
 
-        System.out.print("Masukkan Model Robot: ");
-        String modelRobot = input.nextLine();
-        System.out.print("Masukkan Serial Number: ");
-        String snRobot = input.nextLine();
+        // System.out.print("Masukkan nama Anda: ");
+        // String namaManusia = input.nextLine();
+        // System.out.print("Masukkan umur Anda: ");
+        // int umurManusia = input.nextInt();
+        // input.nextLine(); 
 
-        Robot myRobot = new Robot(modelRobot, snRobot);
+        // Manusia user = new Manusia(namaManusia, umurManusia);
 
-        myRobot.tampilkanNama();
-        myRobot.tampilkanUmur();
-        myRobot.makan();
-        myRobot.berjalan();
-        myRobot.bersuara();
-        myRobot.selfDestruct(); //method yg berbeda dgn class yg lain
+        // user.tampilkanNama();
+        // user.tampilkanUmur();
+        // user.makan();
+        // user.berjalan();
+        // user.bersuara();
 
-        input.close();
+        // System.out.print("Masukkan Model Robot: ");
+        // String modelRobot = input.nextLine();
+        // System.out.print("Masukkan Serial Number: ");
+        // String snRobot = input.nextLine();
+
+        // Robot myRobot = new Robot(modelRobot, snRobot);
+
+        // myRobot.tampilkanNama();
+        // myRobot.tampilkanUmur();
+        // myRobot.makan();
+        // myRobot.berjalan();
+        // myRobot.bersuara();
+        // myRobot.selfDestruct(); //method yg berbeda dgn class yg lain
+
+        // input.close();
     }
 }

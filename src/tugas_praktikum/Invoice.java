@@ -1,0 +1,47 @@
+package tugas_praktikum;
+
+public class Invoice implements Payable {
+    String productName;
+    int quantity;
+    int pricePerItem;
+    
+    public Invoice(String productName, int quantity, int pricePerItem) {
+        this.productName = productName;
+        this.quantity = quantity;
+        this.pricePerItem = pricePerItem;
+    }
+    
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getPricePerItem() {
+        return pricePerItem;
+    }
+
+    public void setPricePerItem(int pricePerItem) {
+        this.pricePerItem = pricePerItem;
+    }
+
+    @Override
+    public double getPayableAmmount() {
+        return quantity*pricePerItem;
+    }
+
+    public String toString() {
+        return "Nama Produk: " + productName + ", Qty: " + quantity + ", Harga satuan: " + pricePerItem + ", Total: " + getPayableAmmount();
+    }
+
+}
