@@ -10,18 +10,32 @@ public class App {
         kucing.bersuara();
 
         System.out.print("Masukkan nama Anda: ");
-        String nama = input.nextLine();
+        String namaManusia = input.nextLine();
         System.out.print("Masukkan umur Anda: ");
-        int umur = input.nextInt();
+        int umurManusia = input.nextInt();
         input.nextLine(); 
 
-        Manusia user = new Manusia(nama, umur);
+        Manusia user = new Manusia(namaManusia, umurManusia);
 
         user.tampilkanNama();
         user.tampilkanUmur();
         user.makan();
         user.berjalan();
         user.bersuara();
+
+        System.out.print("Masukkan Model Robot: ");
+        String modelRobot = input.nextLine();
+        System.out.print("Masukkan Serial Number: ");
+        String snRobot = input.nextLine();
+
+        Robot myRobot = new Robot(modelRobot, snRobot);
+
+        myRobot.tampilkanNama();
+        myRobot.tampilkanUmur();
+        myRobot.makan();
+        myRobot.berjalan();
+        myRobot.bersuara();
+        myRobot.selfDestruct(); //method yg berbeda dgn class yg lain
 
         input.close();
     }
