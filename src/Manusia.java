@@ -2,6 +2,11 @@ public class Manusia implements MakhlukHidup, Identitas {
     private String nama;
     private int umur;
 
+    public Manusia(String nama, int umur) {
+        this.nama = nama;
+        this.umur = umur;
+    }
+
     @Override
     public void makan() {
         System.out.println("Makan pakai sendok garpu");
